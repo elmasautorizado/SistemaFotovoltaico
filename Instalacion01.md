@@ -3,7 +3,7 @@
 ![Consumos.PNG](/SistemaFotovoltaico/imgs/Consumos.PNG)
 
 Como podras observar, he modificado sensiblemente la tabla de consumos. Es posible que le eches un vistazo para asegurar que no hay errores con las potencias de los elementos?? 
-Tambien podras ver que hay una linea naranja para herramientas potentes. Mi intencion por el momento es arrancar esos equipos con el generador de soporte que ya tenemos intencion de comprar. Es posible programar el sistema para que cuando detecte el pico de arranque de estas herramientas, directamente se arranque el generador?? Si mas adelante disponemos de medios para ampliar la instalacion de baterias, quizas lo haremos para prescindir del generador y utilizarlo unicamente como soporte.
+Tambien podras ver que hay una linea naranja para herramientas potentes. Mi intención por el momento es arrancar esos equipos con el generador de soporte que ya tenemos intencion de comprar. Es posible programar el sistema para que cuando detecte el pico de arranque de estas herramientas, directamente se arranque el generador?? Si mas adelante disponemos de medios para ampliar la instalacion de baterias, quizas lo haremos para prescindir del generador y utilizarlo unicamente como soporte.
 
 # FACTOR DE SIMULTANEIDAD Y POTENCIA PICO.
 
