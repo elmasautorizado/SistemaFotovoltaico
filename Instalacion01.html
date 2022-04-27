@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Instalacion01.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="consumos">CONSUMOS.</h1>
+<p><img src="/imgs/Consumos.PNG" alt="Consumos.PNG"></p>
+<p>Como podras observar, he modificado sensiblemente la tabla de consumos. Es posible que le eches un vistazo para asegurar que no hay errores con las potencias de los elementos??
+Tambien podras ver que hay una linea naranja para herramientas potentes. Mi intención por el momento es arrancar esos equipos con el generador de soporte que ya tenemos intencion de comprar. Es posible programar el sistema para que cuando detecte el pico de arranque de estas herramientas, directamente se arranque el generador?? Si mas adelante disponemos de medios para ampliar la instalacion de baterias, quizas lo haremos para prescindir del generador y utilizarlo unicamente como soporte.</p>
+<h1 id="factor-de-simultaneidad-y-potencia-pico">FACTOR DE SIMULTANEIDAD Y POTENCIA PICO.</h1>
+<p>Con los cambios incorporados, la suma de todos los consumos ha cambiado. El nuevo valor es <strong>4990W</strong> (Resultado columna verde). Por lo tanto, el factor de simultaneidad tambien se ve modificado:</p>
+<blockquote>
+<p>Fs = (700 + 1000) / 4990 = 0,34
+La potencia del inversor no deberia ser inferior a: 4990 * 0,34 = 1697W</p>
+</blockquote>
+<p>En definitiva no parace un gran cambio por el momento.</p>
+<h1 id="consumo-final-calculado">CONSUMO FINAL CALCULADO.</h1>
+<p>Aqui me gustaria incorporar dos cambios:</p>
+<ol>
+<li>Nuevo valor de consumo obtenido del total de la columna amarilla. <strong>5800Wh/dia</strong>.</li>
+<li>La potencia puntual de un motor electrico me gustaria eliminarla. Como he dicho antes, las herramientas me gustaria que arrancaran con el generador y de esa manera reducir el total de energia consumida de la casilla <strong>010</strong>. Mis calculos con el rendimiento del 95% me dan un total de <strong>6106Wh/dia</strong>.</li>
+</ol>
+<h1 id="produccion-energetica">PRODUCCION ENERGETICA.</h1>
+<h2 id="datos-fotovoltaica">DATOS FOTOVOLTAICA.</h2>
+<p>Aqui, si es posible me gustaria modificar el valor de la casilla <strong>019</strong>, para ponernos en el caso mas desfaforable. En lugar de <strong>2,33</strong>, me gustaria introducir <strong>2,00</strong>.</p>
+<p>Por lo demas estoy de acuerdo en sobredimensionar el 30% de la casilla <strong>026</strong>. Y tambien estoy de acuerdo en la casilla <strong>027</strong>.</p>
+<p>De esa manera solamente seria necesario modificar la casilla <strong>028</strong> con el nuevo valor obtenido previamente de <strong>6106Wh/dia</strong>.
+Supongo que quizas podemos reducir el numero de paneles a 6, con un total de potencia instalada de <strong>2370Wp</strong>?? Aunque esto realmente no se si nos interesa porque el precio de los paneles es asequible y disponemos de espacio en el tejado para instalar 8 sin problema. Ademas si disponemos de mas potencia instalada entiendo que tenemos mayor posibilidad de almacenamiento en baterias. No se si es correcto mi plamteamiento.</p>
+<p>Tambien entiendo que si fueramos con 8 paneles, seguiriamos haciendo el mismo tipo de conexion (5 en serie + 3 en serie, ambos conjuntos conectados en paralelo), con el objetivo de mantener la tension del campo fotovoltaico en <strong>207Vcc</strong>. A no ser que me digas que seria mejor aumentar la tension del campo FV.</p>
+<p>En cuanto a la corriente en el campo, porque la intensidad es la de una placa?? Si pones dos conjuntos en paralelo (uno de 5 panels en serie y otro de 2 en serie), el resultado de la casilla <strong>035</strong> no deberia ser <strong>19A</strong>?? Tambien tenia entendido que lo mejor seria conectarlos todos en serie o quizas esto aumenta demasiado el voltaje??</p>
+<p>La distancia entre las placas y el regulador-inversor no sera mas de <strong>20m</strong> (Casilla <strong>038</strong>).</p>
+<p>Sin problema en cuanto a las secciones de los cables.</p>
+<h1 id="capacidad-de-la-bateria">CAPACIDAD DE LA BATERIA.</h1>
+<p>Teniendo en cuenta el nuevo valor de <strong>6106Wh/dia</strong>, tengo un nuevo valor para la casilla <strong>050</strong>. A mi me sale <strong>4580Wh</strong> de energia a acumular.</p>
+<p>Pero en cualquier caso, el tema baterias necesito investigarlo mas en detalle porque son carisimas y quiero hacerlo bien.</p>
+<h1 id="inversor-de-red">INVERSOR DE RED.</h1>
+<p>Aqui estoy de acuerdo en elegir inversor de fabricacion EU aunque sea mas caro. La potencia seleccionada de <strong>5000W</strong> me parece bien aunque ahora pueda estar algo sobredimensionada, creo que puede estar bien para ampliacion furura con turbina o mas paneles. En cuanto a la opcion Inversor creo nos decidiremos por el de red mixto. Necesito darle una vuelta en funcion de las baterias.</p>
+<p>Esto es todo para la parte electrica de la casa. Te parece bien recalcularlo todo con los nuevos datos que te he facilitado y valoramos los resultados? Por mi parte me pongo a tope con las baterias.</p>
+<h1 id="fototermia">FOTOTERMIA.</h1>
+<p>Aqui entiendo que lo que propones es una instalacion independiente y estoy totalmente de acuerdo y decidido a realizarlo de esta manera con el soporte de una calentador de agua ACS especifico. Por el momento no queremos depender de una caldera de gas para calentar radiadores porque tenemos otras opciones para calentar la casa.</p>
+<p>Aqui te dejo una opcion o similar, que he estado valorando y que parece economica y permite utilizar propano en lugar de butano. Ademas parece compatible con la fototermia? Cual es tu opinion??</p>
+<p><img src="/imgs/CalentadorGas.PNG" alt="CalentadorGas.PNG"></p>
+<p>Inicialmente hemos pensado que lo queremos hacer sencillo pero con posibilidad de ampliacion. Asi que te explico mi idea:</p>
+<ol>
+<li>Instalacion independiente en el alero trasero de la casa. (En el delantero estarian los 8 del sistema FV).</li>
+</ol>
+<p><img src="/imgs/Orientacion.png" alt="Orientacion.png"></p>
+<p>Crees que puede haber problemas en ese lado del tejado?</p>
+<ol start="2">
+<li>
+<p>Como te dije, solamente tengo 4 paneles por el momento. Asi que los paneles para la fototermia pueden ser diferentes y podria mirar otras opciones a los Atersa. Tu me recomendarias alguno en especial?</p>
+</li>
+<li>
+<p>A partir de aqui, el objetivo seria instalar la opcion 1 de tu pagina web. Es decir el sistema Vcc. Creo que es un buen comienzo para valorar el gasto junto con el calentador de gas. Y por el momento no gastamos en mas baterias e inversor. Si en el futuro queremos ampliar, entiendo que podemos instalar otro termo para resistencia Vca y baterias e inversor para gestionar excedente.</p>
+</li>
+<li>
+<p>El kit de fototermia que ofreces en tu web me parece interesante y ademas no dispongo de termo y prefiero que venga todo calibrado de tu parte. La capacidad deberia estar entorno a los 200l segun tus calculos. Dispones de esa capacidad?</p>
+</li>
+</ol>
+<p>Con estos datos crees que me podrias pasar precio de la fototermia?</p>
+<p>Muchas gracias por tu tiempo Jacint!</p>
+
+</body>
+</html>
