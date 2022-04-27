@@ -1,6 +1,6 @@
 # CONSUMOS.
 
-![Consumos.PNG](/SistemaFotovoltaico/imgs/Consumos.PNG)
+![Consumos.PNG](/imgs/Consumos.PNG)
 
 Como podras observar, he modificado sensiblemente la tabla de consumos. Es posible que le eches un vistazo para asegurar que no hay errores con las potencias de los elementos?? 
 Tambien podras ver que hay una linea naranja para herramientas potentes. Mi intención por el momento es arrancar esos equipos con el generador de soporte que ya tenemos intencion de comprar. Es posible programar el sistema para que cuando detecte el pico de arranque de estas herramientas, directamente se arranque el generador?? Si mas adelante disponemos de medios para ampliar la instalacion de baterias, quizas lo haremos para prescindir del generador y utilizarlo unicamente como soporte.
@@ -58,13 +58,13 @@ Aqui entiendo que lo que propones es una instalacion independiente y estoy total
 
 Aqui te dejo una opcion o similar, que he estado valorando y que parece economica y permite utilizar propano en lugar de butano. Ademas parece compatible con la fototermia? Cual es tu opinion??
 
-![CalentadorGas.PNG](/SistemaFotovoltaico/imgs/CalentadorGas.PNG)
+![CalentadorGas.PNG](/imgs/CalentadorGas.PNG)
 
 Inicialmente hemos pensado que lo queremos hacer sencillo pero con posibilidad de ampliacion. Asi que te explico mi idea:
 
 1. Instalacion independiente en el alero trasero de la casa. (En el delantero estarian los 8 del sistema FV). 
 
-![Orientacion.PNG](/SistemaFotovoltaico/imgs/Orientacion.PNG)
+![Orientacion.PNG](/imgs/Orientacion.PNG)
 
 Crees que puede haber problemas en ese lado del tejado?
 
