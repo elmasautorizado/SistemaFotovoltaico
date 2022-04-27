@@ -64,7 +64,7 @@ Inicialmente hemos pensado que lo queremos hacer sencillo pero con posibilidad d
 
 1. Instalacion independiente en el alero trasero de la casa. (En el delantero estarian los 8 del sistema FV). 
 
-![Orientacion.PNG](/imgs/Orientacion.PNG)
+![Orientacion.png](/imgs/Orientacion.png)
 
 Crees que puede haber problemas en ese lado del tejado?
 
