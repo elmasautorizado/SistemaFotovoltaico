@@ -55,3 +55,5 @@ No conectar baterías en paralelo
 Comparativa de baterías solares
 
 Diseño de batería solar en C100 o C10?
+
+![DynessB4850.PNG](/imgs/DynessB4850.PNG)
